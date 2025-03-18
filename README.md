@@ -1,5 +1,8 @@
 # ROS 2 Dual Arm Teleoperation
 
+> **Note:** The demonstration GIFs below are large files and may take a moment to load.
+
+
 ![Dual Arm Demo 1](readme_resources/01.gif)
 ![Dual Arm Demo 2](readme_resources/02.gif)
 
