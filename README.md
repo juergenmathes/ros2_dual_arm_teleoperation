@@ -1,5 +1,8 @@
 # ROS 2 Dual Arm Teleoperation
 
+![Dual Arm Demo 1](readme_resources/01.gif)
+![Dual Arm Demo 2](readme_resources/02.gif)
+
 This repository contains a ROS 2 package for vision-based teleoperation of a dual robot arm system. The system uses a camera to track hand movements via MediaPipe and maps them to control commands for two robot arms with grippers.
 
 ## Project Overview
@@ -56,9 +59,9 @@ The system consists of three main components:
 ## Robot Configuration
 
 The robot consists of two identical arms, each with:
-- 5 revolute joints for arm movement
+- 6 revolute joints for arm movement
 - 2 prismatic joints for gripper control
-- Total of 14 controllable joints across both arms
+- Total of 16 controllable joints across both arms
 
 ## Prerequisites
 
@@ -67,6 +70,7 @@ The robot consists of two identical arms, each with:
 - OpenCV
 - MediaPipe
 - cv_bridge
+- transforms3d
 
 ## Installation
 
@@ -78,7 +82,7 @@ The robot consists of two identical arms, each with:
 
 2. Install dependencies:
    ```bash
-   pip install mediapipe opencv-python
+   pip install mediapipe opencv-python transforms3d
    ```
 
 3. Build the package:
@@ -101,12 +105,13 @@ The robot consists of two identical arms, each with:
 
 3. Use your hands in front of the camera to control the robot arms:
    - Move your hands to control arm positions
+   - Hand orientation controls the arm's end-effector orientation
    - Open/close your hand to open/close the gripper
 
 ## Hand Control Mapping
 
 - **Hand Position**: Controls the arm's end-effector position
-- **Hand Orientation**: Controls the arm's end-effector orientation
+- **Hand Orientation**: Controls the arm's end-effector orientation (full 6-DOF control)
 - **Hand Open/Closed**: Controls the gripper (open/closed)
 
 ## License
